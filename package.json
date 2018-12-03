@@ -1,5 +1,5 @@
 {
-  "name": "ApiClientWrapper",
+  "name": "restclientwrapper",
   "version": "1.0.0",
   "description": "A service wrappers that can be used to send rest api request (get and post handled for now...)",
   "main": "./index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SiddharthDivakaran/ApiClientWrapper"
+    "url": "git+https://github.com/SiddharthDivakaran/ApiClientWrapper.git"
   },
   "engines": {
     "node": ">=0.6"
@@ -30,5 +30,9 @@
     "request-promise": "^4.2.2",
     "url": "^0.11.0",
     "yargs": "^12.0.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/SiddharthDivakaran/ApiClientWrapper/issues"
+  },
+  "homepage": "https://github.com/SiddharthDivakaran/ApiClientWrapper#readme"
 }

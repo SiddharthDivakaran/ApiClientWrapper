@@ -10,7 +10,7 @@ var Options = function () {
 }
 
 Options.prototype.setEndpointUrl = function (url) {
-    var regex = /^(?:http(s)?:\/\/)?[\w.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+    var regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
     if (regex.test(url) === false) {
         throw new Error("Please give valid url");
     }
