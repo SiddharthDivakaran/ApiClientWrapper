@@ -16,4 +16,4 @@ var getResponse = function () {
         })
     }
 }
-module.exports = getResponse;
+module.exports = new getResponse();
