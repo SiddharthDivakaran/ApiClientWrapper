@@ -2,7 +2,7 @@
 A service wrappers that can be used to send rest api request (get and post handled for now...)
 
 ## Usage:
-1.Download and install the package.
+1.Download and install the package.</br>
 2.To send the request we can pass all te details in the form of option object as a request parameter.
 
 ## Creating option object:
