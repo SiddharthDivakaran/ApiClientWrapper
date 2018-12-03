@@ -2,13 +2,25 @@
   "name": "ApiClientWrapper",
   "version": "1.0.0",
   "description": "A service wrappers that can be used to send rest api request (get and post handled for now...)",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["api client","service","rest clinet","service client"],
+  "keywords": [
+    "api client",
+    "service",
+    "rest clinet",
+    "service client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiddharthDivakaran/ApiClientWrapper"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
   "author": "Siddharth Divakaran",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "https-proxy-agent": "^2.2.1",
     "jasmine": "^3.3.0",
