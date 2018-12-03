@@ -1,6 +1,6 @@
 var requestParameter = require('./core/requestParamType');
 var token = require('./authentication/Outh2TokenGenerator');
-var options = require('./core/Options');
+var opt=require('./core/Options');
 var apiclient = require('./core/apiRequest');
 
 var Client = function () {
@@ -13,8 +13,9 @@ var Client = function () {
     this.getToken = function (url, clientId, clientSecret, proxy) {
         return token.getToken(url, clientId, clientSecret, proxy);
     }
-    this.options = function () {
-        return new options();
+    this.option=function()
+    {
+        return new opt();
     }
 }
 module.exports = new Client();
