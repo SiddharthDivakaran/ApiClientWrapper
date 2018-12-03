@@ -12,7 +12,9 @@ var tokenGeneration = function () {
      * @param {*proxy proxy value to be set if proxy needed to be passed}
      * */
     this.getToken = function (url, clientId, clientSecret, proxy) {
-        var opt = new option(url, "POST");
+        var opt = new option();
+        opt.setEndpointUrl(url);
+        opt.setHttpMethod(opt.httpMethods().POST);
         opt.setProxy(proxy);
 
         //setting request body
