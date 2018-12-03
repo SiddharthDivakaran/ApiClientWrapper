@@ -7,8 +7,8 @@ var Client = function () {
     this.requestParameters = function () {
         return new requestParameter();
     }
-    this.sendRequest = function () {
-        return apiclient;
+    this.sendRequest = function (optionObj) {
+        return apiclient.serviceResponse(optionObj);
     }
     this.getToken = function (url, clientId, clientSecret, proxy) {
         return token.getToken(url, clientId, clientSecret, proxy);
