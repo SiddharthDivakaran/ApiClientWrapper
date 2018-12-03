@@ -1,21 +1,19 @@
-var client = require('../core/apiRequest');
-var option = require('../core/Options');
-var requestParameter = require('../core/requestParamType');
+var serviceClient = require('../index');
 
 //sample POST request
 
+var url = "https://reqres.in/api/users";
+
 //setting body
-var body=new requestParameter();
-body.setKeyValue("name","morpheus");
-body.setKeyValue("job","leader");
+var body = serviceClient.requestParameters();
+body.setKeyValue("name", "morpheus");
+body.setKeyValue("job", "leader");
 
-var url="https://reqres.in/api/users";
-
-var opt=new option();
+var opt = serviceClient.options();
 opt.setEndpointUrl(url);
 opt.setHttpMethod(opt.httpMethods().POST);
 opt.setBody(body);
 
-client.serviceResponse(opt.getOptionValues()).then(function(res){
+client.serviceResponse(opt.getOptionValues()).then(function (res) {
     console.log(res);
 });
