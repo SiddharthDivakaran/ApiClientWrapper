@@ -8,7 +8,10 @@ var Options = function () {
         this["agent"] = new HttpsProxyAgent(proxy);
     }
 }
-
+/**
+ * 
+ * @param {url service/rest api end point url i.e host+path}  
+ */
 Options.prototype.setEndpointUrl = function (url) {
     var regex = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
     if (regex.test(url) === false) {
@@ -18,6 +21,10 @@ Options.prototype.setEndpointUrl = function (url) {
         this["url"] = url;
     }
 }
+/**
+ * 
+ * @param {method http method GET,POST etc...}  
+ */
 Options.prototype.setHttpMethod = function (method) {
     switch (method) {
         case httpMethod.GET:
@@ -36,9 +43,16 @@ Options.prototype.setHttpMethod = function (method) {
             throw new Error("Not a valid http verb/method")
     }
 }
+/**
+ * Call this to get valid http method type(i.e GET,POST etc...)
+ */
 Options.prototype.httpMethods = function () {
     return httpMethod;
 }
+/**
+ * 
+ * @param {proxyvalue proxy value to be set if using proxy}  
+ */
 Options.prototype.setProxy = function (proxyValue) {
     if (proxyValue === "") {
         throw new Error("proxy value cannot be blank");
@@ -47,21 +61,36 @@ Options.prototype.setProxy = function (proxyValue) {
         this["agent"] = this.agent;
     }
 }
+/**
+ * 
+ * @param {headerValue header object that is to be set in option}  
+ */
 Options.prototype.setHeader = function (headerValue) {
     if (headerValue !== undefined) {
         this["headers"] = headerValue;
     }
 }
+/**
+ * 
+ * @param {body body object that is to be set in option}  
+ */
 Options.prototype.setBody = function (body) {
     if (body !== undefined) {
         this["body"] = body;
     }
 }
+/**
+ * 
+ * @param {qs querystring object that is to be set in option}  
+ */
 Options.prototype.setQueryString = function (qs) {
     if (qs !== undefined) {
         this["qs"] = qs;
     }
 }
+/**
+ * call this to get option object that is to be passed to request
+ */
 Options.prototype.getOptionValues = function () {
     keys = Object.keys(this);
     value = Object.values(this);
