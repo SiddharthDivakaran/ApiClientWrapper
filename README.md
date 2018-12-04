@@ -3,7 +3,7 @@ A service wrappers that can be used to send rest api request (get and post handl
 
 ## Usage:
 1.Download and install the package.</br>
-2.To send the request we can pass all te details in the form of option object as a request parameter.
+2.To send the request we can pass all the details in the form of option object as a request parameter.
 
 ## Creating option object:
 var client = require('restclientwrapper')
