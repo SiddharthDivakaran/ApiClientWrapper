@@ -1,6 +1,6 @@
 {
   "name": "restclientwrapper",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A service wrappers that can be used to send rest api request (get and post handled for now...)",
   "main": "./index.js",
   "scripts": {
