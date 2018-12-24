@@ -1,10 +1,9 @@
-
 var serviceClient = require('../index');
 //sample GET request
 
 var url = "https://jsonplaceholder.typicode.com/todos/1"
 
-var opt = serviceClient.options();
+var opt = serviceClient.option();
 opt.setEndpointUrl(url);
 opt.setHttpMethod(opt.httpMethods().GET);
 

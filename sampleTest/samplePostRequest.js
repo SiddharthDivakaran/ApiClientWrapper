@@ -9,11 +9,12 @@ var body = serviceClient.requestParameters();
 body.setKeyValue("name", "morpheus");
 body.setKeyValue("job", "leader");
 
-var opt = serviceClient.options();
+var opt = serviceClient.option();
 opt.setEndpointUrl(url);
 opt.setHttpMethod(opt.httpMethods().POST);
 opt.setBody(body);
 
-client.serviceResponse(opt.getOptionValues()).then(function (res) {
-    console.log(res);
+serviceClient.sendRequest(opt.getOptionValues()).then(function(res){
+  console.log(res);
 });
+
